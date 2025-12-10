@@ -1,0 +1,214 @@
+/* ==== GENERAL ==== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background: #0c0f1e;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ==== NAVBAR ==== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(20, 22, 40, 0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ff5e9e;
+    letter-spacing: 2px;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #cfcfcf;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff5e9e;
+    text-shadow: 0 0 10px #ff5e9e;
+}
+
+/* ==== HERO SECTION ==== */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 10%;
+    background: radial-gradient(circle at top left, #182050, #0c0f1e);
+}
+
+.text h3 {
+    color: #ff5e9e;
+    letter-spacing: 2px;
+}
+
+.typing {
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #ff5e9e;
+    font-size: 38px;
+    animation: typing 3s steps(30) forwards, blink 0.7s infinite;
+}
+
+.text p {
+    color: #dddddd;
+    line-height: 1.6;
+}
+
+.profile {
+    width: 620px;
+    height: auto;
+    filter: drop-shadow(0 0 15px rgba(255, 94, 158, 0.4));
+    border-radius: 12px;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* ==== ABOUT ==== */
+.about {
+    padding: 50px 10%;
+    background: #14172d;
+    margin: 70px 5%;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(255, 94, 158, 0.15);
+}
+
+.about h2 {
+    color: #57a8ff;
+    text-shadow: 0 0 10px #57a8ff;
+    margin-bottom: 20px;
+}
+
+.about li {
+    background: rgba(230, 230, 255, 0.05);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border-left: 4px solid #57a8ff;
+}
+
+/* ==== PORTFOLIO ==== */
+.portfolio {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.portfolio h2 {
+    color: #57a8ff;
+    text-shadow: 0 0 10px #57a8ff;
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 25px;
+}
+
+.card {
+    width: 30%;
+    background: #14172d;
+    border-radius: 12px;
+    padding: 15px;
+    transition: 0.3s;
+    box-shadow: 0 0 20px rgba(87, 168, 255, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(87, 168, 255, 0.3);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ==== CONTACT ==== */
+.contact {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.contact h2 {
+    color: #ff5e9e;
+    text-shadow: 0 0 10px #ff5e9e;
+}
+
+/* ==== FOOTER ==== */
+footer {
+    margin-top: 60px;
+    padding: 25px;
+    background: #101327;
+    text-align: center;
+    color: #aaa;
+    border-top: 1px solid #30334e;
+}
+
+/* ===================== */
+/*       ANIMATIONS      */
+/* ===================== */
+
+/* Fade In (scroll) */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Typing */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 300px; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* Floating */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+}
+/* ==== FIXED TYPING EFFECT – PREMIUM VERSION ==== */
+.typing {
+    border-right: 3px solid #ff5e9e;
+    font-size: 38px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    width: fit-content;
+    animation: typing 4s steps(40) forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+    from { clip-path: inset(0 100% 0 0); }
+    to { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
